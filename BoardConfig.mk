@@ -47,6 +47,9 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
+#DEX pre-optimization
+DONT_DEXPREOPT_PREBUILTS := true
+
 TARGET_USES_CASH_EXTENSION := true
 
 #TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/input/clearpad/wakeup_gesture"
