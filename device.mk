@@ -122,4 +122,4 @@ $(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 GAPPS_FORCE_MATCHING_DPI := true
 
 #Disable stock package override for gapps
-GAPPS_BYPASS_PACKAGE_OVERRIDES := Chrome
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
