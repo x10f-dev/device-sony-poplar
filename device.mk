@@ -113,3 +113,7 @@ $(call inherit-product-if-exists, vendor/nxp/nxp-vendor.mk)
 
 # include board vendor blobs
 $(call inherit-product-if-exists, vendor/sony/yoshino-common/yoshino-partial.mk)
+
+# Include Open Gapps to build
+GAPPS_VARIANT := stock
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
