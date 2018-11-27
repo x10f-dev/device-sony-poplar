@@ -16,6 +16,9 @@
 include device/sony/yoshino/BoardConfigPlatform.mk
 include vendor/sony/poplar/BoardConfigVendor.mk
 
+## Device 
+DEVICE_PATH := device/sony/poplar
+
 #BOOTLOADER
 TARGET_BOOTLOADER_BOARD_NAME := G8341
 
@@ -24,6 +27,9 @@ PRODUCT_PLATFORM := yoshino
 
 # NFC
 NXP_CHIP_FW_TYPE := PN553
+
+### KERNEL
+TARGET_KERNEL_CONFIG := lineage-msm8998-yoshino-poplar_defconfig
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=poplar
 
