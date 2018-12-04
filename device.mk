@@ -28,3 +28,13 @@ else # WITH_TWRP
 include $(DEVICE_PATH)/device/*.mk
 include $(DEVICE_PATH)/vendor_prop.mk
 endif # WITH_TWRP
+
+# add OpenGApps to build
+GAPPS_VARIANT := stock
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
+# include Google WebView, Messenger, Chrome
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_MMS_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
