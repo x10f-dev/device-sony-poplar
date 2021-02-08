@@ -14,15 +14,8 @@
 
 include device/sony/yoshino/PlatformConfig.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := unknown
-ifneq (,$(filter %g8341,$(TARGET_PRODUCT)))
+# Bootloader board
 TARGET_BOOTLOADER_BOARD_NAME := G8341
-else ifneq (,$(filter %g8342,$(TARGET_PRODUCT)))
-TARGET_BOOTLOADER_BOARD_NAME := G8342
-else
-TARGET_BOOTLOADER_BOARD_NAME := G8341
-$(warning Unrecognized value for TARGET_PRODUCT: "$(TARGET_PRODUCT)", using default value: "$(TARGET_BOOTLOADER_BOARD_NAME)")
-endif
 
 # Platform
 PRODUCT_PLATFORM := yoshino
@@ -47,8 +40,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
-#DEX pre-optimization
-DONT_DEXPREOPT_PREBUILTS := true
 
 TARGET_USES_CASH_EXTENSION := true
 
